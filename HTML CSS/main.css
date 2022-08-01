@@ -1,5 +1,6 @@
 .profile {
   width: 250px;
+  /* 밑에 3개 속성이 가운데 정렬을 위한 것 */
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -8,4 +9,27 @@
 .title {
   text-align: center;
   font-size: 16px;
+}
+
+.content {
+  text-align: center;
+}
+
+/* div 관련 속성들
+margin : 상하좌우 여백
+padding : 상하좌우 안쪽 여백
+border : 테두리
+border-radius : 테두리 둥글게 */
+.box {
+  width: 200px;
+  background-color: #f88c10;
+  margin: 10px;
+  padding: 40px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 14px;
+  color: white;
+  box-shadow: 6px 6px #faab50c3;
 }
