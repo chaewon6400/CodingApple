@@ -1,3 +1,4 @@
+/* layout 1 */
 .container {
   width: 800px;
   margin-left: auto;
@@ -46,4 +47,41 @@
   font-weight: bold;
   text-decoration: none;
   color: black;
+}
+
+/* layout 2 */
+.main-background {
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/sky.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 1px;
+}
+
+.main-title {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.detail-title {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.main-background button {
+  width: 100px;
+  height: 30px;
+  background-color: #b1e1ff;
+  margin: auto;
+  display: block;
+  border-radius: 9px;
+  border: none;
+}
+
+.main-background button:hover {
+  background: #0096ff;
 }
