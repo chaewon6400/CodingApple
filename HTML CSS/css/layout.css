@@ -74,12 +74,15 @@
 
 .main-background button {
   width: 100px;
-  height: 30px;
+  height: 35px;
+  font-size: 15px;
   background-color: #b1e1ff;
   margin: auto;
   display: block;
   border-radius: 9px;
   border: none;
+  position: relative;
+  top: 20px;
 }
 
 .main-background button:hover {
