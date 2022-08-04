@@ -57,6 +57,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 1px;
+  position: relative;
 }
 
 .main-title {
@@ -81,10 +82,25 @@
   display: block;
   border-radius: 9px;
   border: none;
-  position: relative;
-  top: 20px;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  margin: auto;
 }
 
 .main-background button:hover {
   background: #0096ff;
+}
+
+.second-background {
+  width: 500px;
+  height: 200px;
+  background-color: #b2c8df;
+  position: absolute;
+  top: 430px;
+  right: 0px;
+  left: 0px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
 }
