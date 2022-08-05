@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 td,
 th {
   border: 1px solid black;
@@ -5,4 +9,51 @@ th {
 
 table {
   border-collapse: collapse;
+  background-color: white;
+}
+
+img {
+  width: 100px;
+  float: left;
+}
+.s-background {
+  background-color: #b2ccd6;
+}
+
+.productName {
+  font-size: 18px;
+  font-weight: 600;
+  float: left;
+}
+
+.productDetail {
+  color: #98b1b9;
+  font-weight: 500;
+}
+
+.productPrice {
+  color: #98b1b9;
+}
+
+.productTotal {
+  color: #27486f;
+}
+
+.editCart {
+  color: #133761;
+}
+
+.chooseBtn {
+  background-color: #133761;
+  color: white;
+  font-size: 14px;
+  font-weight: 100;
+  padding: 16px;
+  border: none;
+  border-radius: 5px;
+  float: right;
+}
+
+.chooseBtn:hover {
+  background-color: #303f8b;
 }
