@@ -38,50 +38,49 @@
       >
     </div>
 
-    <div class="s-background">
-      <div style="width: 80%; max-width: 800px; margin: 50px">
-        <h1 style="color: #133761">Your shopping cart 🍪</h1>
-        <div>
-          <table>
+    <div class="cart-background">
+      <h2 style="color: #133761">Your shopping cart 🍪</h2>
+      <div>
+        <table class="cartTable" frame="void">
+          <thead>
             <tr style="text-align: center; color: #98b1b9">
               <td>ITEM</td>
               <td>AMOUNT</td>
               <td>PRICE</td>
               <td>TOTAL</td>
             </tr>
+          </thead>
+          <tbody>
             <tr>
-              <td>
+              <td class="product">
                 <img src="img/snack1.jpeg" />
                 <p class="productName">Chocolate Cookie</p>
                 <p class="productDetail">Simple is best는 진리죠</p>
               </td>
-              <td>1</td>
+              <td class="productAmount">1</td>
               <td class="productPrice">$ 3.5</td>
               <td class="productTotal">$ 3.5</td>
             </tr>
             <tr>
-              <td>
+              <td class="product">
                 <img src="img/snack2.jpeg" />
                 <p class="productName">Double Chocolate Cookie</p>
                 <p class="productDetail">
                   진한 초콜릿의 맛이 필요하신 날 추천해드립니다.
                 </p>
               </td>
-              <td>1</td>
+              <td class="productAmount">1</td>
               <td class="productPrice">$ 4.2</td>
               <td class="productTotal">$ 4.2</td>
             </tr>
-            <tr style="text-align: right">
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>TOTAL</td>
+            <tr>
+              <td colspan="4" class="totalPrice">$ 8.7</td>
             </tr>
-          </table>
-          <div style="margin-top: 30px">
-            <a href="#" class="editCart">Edit your shopping cart</a>
-            <button class="chooseBtn">Choose payment method</button>
-          </div>
+          </tbody>
+        </table>
+        <div style="margin-top: 30px">
+          <a href="#" class="editCart">Edit your shopping cart</a>
+          <button class="chooseBtn">Choose payment method</button>
         </div>
       </div>
     </div>
