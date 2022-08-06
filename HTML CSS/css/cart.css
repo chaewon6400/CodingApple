@@ -110,3 +110,25 @@ img {
 .custom-link:visited {
   color: white;
 }
+
+/* 클래스 이름 짓기 */
+.main-btn {
+  margin: 10px;
+  padding: 15px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.bg-pink {
+  background-color: pink;
+}
+
+.bg-blue {
+  background-color: skyblue;
+}
+
+/* 만들어두면 편리한 Utility class */
+f-small {
+  font-size: 12px;
+}
