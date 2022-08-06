@@ -72,14 +72,41 @@ img {
   border: none;
   border-radius: 5px;
   float: right;
+  cursor: pointer;
 }
 
 .chooseBtn:hover {
   background-color: #303f8b;
 }
 
+/* 클릭 중의 스타일 */
+.chooseBtn:active {
+  background-color: black;
+}
+
 .totalPrice {
   color: #133761;
   font-size: 20px;
   text-align: right;
+}
+
+.input-test {
+  font-size: 18px;
+  padding: 5px;
+}
+
+.input-test:focus {
+  border: 3px solid pink;
+}
+
+.custom-link {
+  text-decoration: none;
+}
+
+.custom-link:link {
+  color: black;
+}
+
+.custom-link:visited {
+  color: white;
 }
