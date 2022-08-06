@@ -132,3 +132,9 @@ img {
 f-small {
   font-size: 12px;
 }
+f-mid {
+  font-size: 16px;
+}
+f-large {
+  font-size: 20px;
+}
