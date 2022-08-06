@@ -10,13 +10,18 @@
   <body>
     <div class="alert-box" id="alert">
       알림창
-      <button onclick="document.getElementById('alert').style.display='none'">
-        close
-      </button>
+      <button onclick="closeAlert()">close</button>
     </div>
-    <button onclick="document.getElementById('alert').style.display='block'">
-      button
-    </button>
-    <script></script>
+    <button onclick="openAlert()">button</button>
+    <script>
+      function openAlert() {
+        document.getElementById("alert").style.display = "block";
+      }
+      function closeAlert() {
+        document.getElementById("alert").style.display = "none";
+      }
+
+      // 'function의 파라미터 문법' 들을 차례!
+    </script>
   </body>
 </html>
