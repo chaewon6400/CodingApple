@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="main.css" rel="stylesheet" />
   </head>
   <body>
-    <h1 id="hi">hello world</h1>
-
-    <script>
-      document.getElementById("hi").style.fontSize = "16px";
-    </script>
+    <div class="alert-box" id="alert">
+      알림창
+      <button onclick="document.getElementById('alert').style.display='none'">
+        close
+      </button>
+    </div>
+    <button onclick="document.getElementById('alert').style.display='block'">
+      button
+    </button>
+    <script></script>
   </body>
 </html>
