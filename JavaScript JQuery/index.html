@@ -31,11 +31,9 @@
     </ul>
     <script>
       document
-        .getElementsByClassName("navbar-toggler")[0]
+        .querySelector(".navbar-toggle")[0]
         .addEventListener("click", function () {
-          document
-            .getElementsByClassName("list-group")[0]
-            .classList.toggle("show");
+          document.querySelector(".list-group").classList.toggle("show");
         });
     </script>
     <script
