@@ -21,6 +21,13 @@
   </head>
   <body>
     <!-- 진도 : 모달창만들기와 간단한 애니메이션 -->
+    <div class="black-bg">
+      <div class="white-bg">
+        <h4>로그인하세요</h4>
+        <button class="btn btn-danger" id="close">닫기</button>
+      </div>
+    </div>
+
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">Navbar</span>
@@ -36,18 +43,14 @@
       <li class="list-group-item">A fourth item</li>
       <li class="list-group-item">And a fifth one</li>
     </ul>
-    <p class="hi">Hello Everyone</p>
-    <p class="hi">Hello Everyone</p>
-    <p class="hi">Hello Everyone</p>
-    <button class="testBtn">Button</button>
+    <button class="loginBtn">로그인</button>
     <script>
-      //document.querySelector(".hi").innerHTML = "안녕하세요";
-      $(".hi").html("안녕하세요");
-      $(".hi").css("color", "blue");
-      $(".hi").addClass("show");
+      $(".loginBtn").on("click", function () {
+        $(".black-bg").addClass("show-modal");
+      });
 
-      $(".testBtn").on("click", function () {
-        $(".hi").fadeOut();
+      $("#close").on("click", function () {
+        $(".black-bg").removeClass("show-modal");
       });
 
       document
