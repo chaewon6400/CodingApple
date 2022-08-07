@@ -8,13 +8,21 @@
     <link href="main.css" rel="stylesheet" />
   </head>
   <body>
+    <!-- 진도 : 서브메뉴 만들어보기와 classList 다루기 -->
+
     <div class="alert-box" id="alert">알림창</div>
-    <button onclick="openAlert('none')">close</button>
+    <button id="closeBtn">close</button>
     <button onclick="openAlert('block','아이디를 입력하세요')">button1</button>
     <button onclick="openAlert('block', '비밀번호를 입력하세요')">
       button2
     </button>
     <script>
+      document
+        .getElementById("closeBtn")
+        .addEventListener("mouseover", function () {
+          document.getElementById("alert").style.display = "none";
+        });
+
       function openAlert(파라1, 파라2) {
         document.getElementById("alert").style.display = 파라1;
         document.getElementById("alert").innerHTML = 파라2;
