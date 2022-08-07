@@ -8,20 +8,17 @@
     <link href="main.css" rel="stylesheet" />
   </head>
   <body>
-    <div class="alert-box" id="alert">
-      알림창
-      <button onclick="closeAlert()">close</button>
-    </div>
-    <button onclick="openAlert()">button</button>
+    <div class="alert-box" id="alert">알림창</div>
+    <button onclick="openAlert('none')">close</button>
+    <button onclick="openAlert('block','아이디를 입력하세요')">button1</button>
+    <button onclick="openAlert('block', '비밀번호를 입력하세요')">
+      button2
+    </button>
     <script>
-      function openAlert() {
-        document.getElementById("alert").style.display = "block";
+      function openAlert(파라1, 파라2) {
+        document.getElementById("alert").style.display = 파라1;
+        document.getElementById("alert").innerHTML = 파라2;
       }
-      function closeAlert() {
-        document.getElementById("alert").style.display = "none";
-      }
-
-      // 'function의 파라미터 문법' 들을 차례!
     </script>
   </body>
 </html>
