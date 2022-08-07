@@ -7,11 +7,14 @@
 }
 
 .list-group {
-  display: none;
+  overflow: hidden;
+  height: 0px;
+  transition: all 0.5s;
 }
 
-.show {
-  display: block;
+.show-list {
+  height: 210px;
+  opacity: 1;
 }
 
 /* 모달창 숙제 디자인 */
@@ -22,7 +25,10 @@
   background: rgba(0, 0, 0, 0.5);
   z-index: 5;
   padding: 30px;
-  display: none;
+  /* 애니메이션 줄 때 display: none; 의 대용 */
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
 }
 .white-bg {
   background: white;
@@ -31,5 +37,6 @@
 }
 
 .show-modal {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
