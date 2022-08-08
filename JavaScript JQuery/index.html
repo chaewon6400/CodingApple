@@ -28,13 +28,11 @@
         <!-- form은 서버로 유저정보 전송하려고 쓰는 것 -->
         <form action="success.html">
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
-            >
+            <label for="email" class="form-label">Email address</label>
             <input
               type="email"
               class="form-control"
-              id="exampleInputEmail1"
+              id="email"
               aria-describedby="emailHelp"
             />
             <div id="emailHelp" class="form-text">
@@ -42,14 +40,8 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Password</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" />
           </div>
           <div class="mb-3 form-check">
             <input
@@ -69,18 +61,19 @@
       </div>
     </div>
     <script>
+      // input 이벤트
+      document.getElementById("email").addEventListener("change", function () {
+        console.log("확인");
+      });
+
       $("form").on("submit", function (e) {
-        if (document.getElementById("exampleInputEmail1").value == "") {
+        if (document.getElementById("email").value == "") {
           e.preventDefault();
           alert("이메일을 입력해주세요");
-        } else if (
-          document.getElementById("exampleInputPassword1").value == ""
-        ) {
+        } else if (document.getElementById("password").value == "") {
           e.preventDefault();
           alert("패스워드를 입력해주세요");
-        } else if (
-          document.getElementById("exampleInputPassword1").value.length <= 6
-        ) {
+        } else if (document.getElementById("password").value.length <= 6) {
           e.preventDefault();
           alert("패스워드를 6자 이상으로 설정해주세요");
         }
