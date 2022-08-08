@@ -20,13 +20,72 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <!-- 진도 : 폼 만들며 배워보는 if else -->
+    <!-- 진도 : input, change 이벤트와 and, or 연산자 -->
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
-        <button class="btn btn-danger" id="close">닫기</button>
+        <br />
+        <!-- form은 서버로 유저정보 전송하려고 쓰는 것 -->
+        <form action="success.html">
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
+            >
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Check me out</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary" id="send">
+            Submit
+          </button>
+          <button type="button" class="btn btn-danger" id="close">닫기</button>
+        </form>
       </div>
     </div>
+    <script>
+      $("form").on("submit", function (e) {
+        if (document.getElementById("exampleInputEmail1").value == "") {
+          e.preventDefault();
+          alert("이메일을 입력해주세요");
+        } else if (
+          document.getElementById("exampleInputPassword1").value == ""
+        ) {
+          e.preventDefault();
+          alert("패스워드를 입력해주세요");
+        } else if (
+          document.getElementById("exampleInputPassword1").value.length <= 6
+        ) {
+          e.preventDefault();
+          alert("패스워드를 6자 이상으로 설정해주세요");
+        }
+      });
+    </script>
 
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
