@@ -82,12 +82,27 @@
 
     <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
-        <span class="navbar-brand">Navbar</span>
+        <span class="navbar-brand">JS practice</span>
+        <button class="badge bg-dark">Dark 🌙</button>
         <button class="navbar-toggler" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
     </nav>
+    <script>
+      var count = 0;
+      $(".badge").on("click", function () {
+        count++;
+        if (count % 2 == 1) {
+          $(".badge").html("Light ☀️");
+          $("body").addClass("dark");
+        } else {
+          $(".badge").html("Dark 🌙");
+          $("body").removeClass("dark");
+        }
+      });
+    </script>
+
     <ul class="list-group">
       <li class="list-group-item">An item</li>
       <li class="list-group-item">A second item</li>
