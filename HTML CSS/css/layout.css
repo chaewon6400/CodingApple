@@ -122,13 +122,13 @@ input[type="text"] {
 
 /* display: flex */
 
-.flex-container {
+.nav-container {
   display: flex;
+  background-color: #b1e1ff;
+  height: 50px;
+  align-items: center;
 }
 
-.flex-item {
-  width: 100px;
-  height: 100px;
-  background-color: pink;
+.nav-item {
   margin: 5px;
 }
