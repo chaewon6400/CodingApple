@@ -1,5 +1,17 @@
+/* 내가 준비한 폰트파일을 CSS에서 사용가능하게 등록하는 과정 */
+@font-face {
+  font-family: "NanumSquareR";
+  src: url(../font/NanumSquareR.woff);
+}
+
 body {
   margin: 0;
+  font-family: "NanumSquareR";
+}
+
+p {
+  /* 폰트를 돌리는 코드 */
+  transform: rotate(0.03deg);
 }
 
 div,
