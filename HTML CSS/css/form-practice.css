@@ -9,8 +9,9 @@ body {
   font-family: "NanumSquareR";
 }
 
+/* 폰트를 돌리는 코드 
+  엄청 조금 회전시키면 폰트가 안 깨지고 부드럽게 보임 */
 p {
-  /* 폰트를 돌리는 코드 */
   transform: rotate(0.03deg);
 }
 

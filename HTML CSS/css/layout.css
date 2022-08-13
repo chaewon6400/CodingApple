@@ -119,3 +119,16 @@ input[type="text"] {
   border: 1px solid black;
   border-radius: 5px;
 }
+
+/* display: flex */
+
+.flex-container {
+  display: flex;
+}
+
+.flex-item {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  margin: 5px;
+}
