@@ -133,8 +133,22 @@ input[type="text"] {
   margin: 5px;
 }
 
-@media screen and (max-width: 1200px) {
-  .main-title {
-    font-size: 30px;
+.explain-container > div {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .explain-container > div {
+    float: left;
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .explain-container > div {
+    float: none;
+    width: 100%;
   }
 }
