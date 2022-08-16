@@ -67,15 +67,29 @@
       });
 
       $("form").on("submit", function (e) {
-        if (document.getElementById("email").value == "") {
+        var userEmail = document.getElementById("email").value;
+
+        if (userEmail == "") {
           e.preventDefault();
           alert("이메일을 입력해주세요");
-        } else if (document.getElementById("password").value == "") {
+        }
+        if (/\S+@\S+\.\S+/.test(userEmail) == false) {
+          e.preventDefault();
+          alert("이메일을 형식에 맞게 입력해주세요");
+        }
+      });
+
+      $("form").on("submit", function (e) {
+        var userPassword = document.getElementById("password").value;
+        if (userPassword == "") {
           e.preventDefault();
           alert("패스워드를 입력해주세요");
-        } else if (document.getElementById("password").value.length <= 6) {
+        } else if (userPassword.length <= 6) {
           e.preventDefault();
           alert("패스워드를 6자 이상으로 설정해주세요");
+        } else if (/[A-Z]/.test(userPassword) == false) {
+          e.preventDefault();
+          alert("패스워드에 영어대문자를 넣어서 생성해주세요");
         }
       });
     </script>
