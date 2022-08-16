@@ -114,10 +114,18 @@
       <h4>Shirts on Sale</h4>
       <button class="loginBtn">로그인</button>
     </div>
-    <div class="alert alert-danger">5초 이내 구매시 사은품 증정!</div>
+    <div class="alert alert-danger">
+      <span class="number">5</span>초 이내 구매시 사은품 증정!
+    </div>
     <script>
+      var count = 5;
       setInterval(function () {
-        //console.log("hello");
+        count -= 1;
+        if (count > 0) {
+          $(".number").html(count);
+        } else {
+          $(".alert").hide();
+        }
       }, 1000);
     </script>
     <script>
