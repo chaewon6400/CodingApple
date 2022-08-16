@@ -20,7 +20,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <!-- 진도 : Level2. 변수, 사칙연산 실력향상 과제 -->
+    <!-- 진도 : Level2. 코드 3줄로 캐러셀 (이미지 슬라이드) 만들기 -->
     <div class="black-bg">
       <div class="white-bg">
         <h4>로그인하세요</h4>
@@ -110,7 +110,16 @@
       <li class="list-group-item">A fourth item</li>
       <li class="list-group-item">And a fifth one</li>
     </ul>
-    <button class="loginBtn">로그인</button>
+    <div class="main-bg">
+      <h4>Shirts on Sale</h4>
+      <button class="loginBtn">로그인</button>
+    </div>
+    <div class="alert alert-danger">5초 이내 구매시 사은품 증정!</div>
+    <script>
+      setInterval(function () {
+        //console.log("hello");
+      }, 1000);
+    </script>
     <script>
       $(".loginBtn").on("click", function () {
         $(".black-bg").addClass("show-modal");
