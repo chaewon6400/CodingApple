@@ -45,3 +45,18 @@
   visibility: visible;
   opacity: 1;
 }
+
+/* 캐러셀 */
+.slide-container {
+  width: 300vw;
+  transition: all 1s;
+}
+
+.slide-box {
+  width: 100vw;
+  float: left;
+}
+
+.slide-box img {
+  width: 100%;
+}

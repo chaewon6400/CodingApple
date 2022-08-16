@@ -131,6 +131,59 @@
     <div class="alert alert-danger">
       <span class="number">5</span>초 이내 구매시 사은품 증정!
     </div>
+
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="image/img_1.jpeg" />
+      </div>
+      <div class="slide-box">
+        <img src="image/img_2.jpeg" />
+      </div>
+      <div class="slide-box">
+        <img src="image/img_3.jpeg" />
+      </div>
+    </div>
+    <button class="before">before</button>
+    <button class="slide-1">1</button>
+    <button class="slide-2">2</button>
+    <button class="slide-3">3</button>
+    <button class="next">next</button>
+
+    <script>
+      // 캐러셀 만들기
+      var photo = 1;
+
+      $(".slide-1").on("click", function () {
+        $(".slide-container").css("transform", "translateX(0vw)");
+        photo = 1;
+      });
+      $(".slide-2").on("click", function () {
+        $(".slide-container").css("transform", "translateX(-100vw)");
+        photo = 2;
+      });
+      $(".slide-3").on("click", function () {
+        $(".slide-container").css("transform", "translateX(-200vw)");
+        photo = 3;
+      });
+      $(".before").on("click", function () {
+        if (photo == 3) {
+          $(".slide-container").css("transform", "translateX(-100vw)");
+          photo = 2;
+        } else if (photo == 2) {
+          $(".slide-container").css("transform", "translateX(-0vw)");
+          photo = 1;
+        }
+      });
+      // 확장성 있게 만든 다음버튼 코드
+      $(".next").on("click", function () {
+        $(".slide-container").css(
+          "transform",
+          "translateX(-" + photo + "00vw)"
+        );
+        photo += 1;
+      });
+    </script>
+
     <script>
       var count = 5;
       setInterval(function () {
