@@ -94,7 +94,7 @@
       });
     </script>
 
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-light bg-light">
       <div class="container-fluid">
         <span class="navbar-brand">JS practice</span>
         <button class="badge bg-dark">Dark 🌙</button>
@@ -103,6 +103,29 @@
         </button>
       </div>
     </nav>
+    <div class="progressA">
+      <div class="progressB">a</div>
+    </div>
+
+    <script>
+      // 이거 왜 안되징...ㅎ?
+      window.addEventListener("scroll", function () {
+        document.getElementsByClassName("progreeB").style.width =
+          window.scrollY / 14 - 3 + "%";
+      });
+    </script>
+
+    <!-- 스크롤이벤트 -->
+    <script>
+      // 스크롤이 될때마다 함수를 실행해 줌
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 250) {
+          $(".navbar-brand").css("font-size", "18px");
+        } else {
+          $(".navbar-brand").css("font-size", "25px");
+        }
+      });
+    </script>
     <script>
       var count = 0;
       $(".badge").on("click", function () {
@@ -128,6 +151,43 @@
       <h4>Shirts on Sale</h4>
       <button class="loginBtn">로그인</button>
     </div>
+    <div class="mark" style="width: 500px; height: 250px; overflow-y: scroll">
+      1999년 8월 2일, 캐나다 온타리오 주 토론토에서 2남 중 둘째로 태어났다.
+      캐나다 토론토에서 태어나 7살까지 살았고 7살부터 12살까지는 미국 뉴욕에
+      거주했다. 그리고 다시 캐나다로 돌아가 밴쿠버에서 만 14살까지 거주했다.
+      마크는 출생지 토론토가 아닌 벤쿠버를 고향(hometown)이라고 소개하는데, 그
+      이유는 토론토에서 태어났지만 너무 어릴 적이라 기억이 없기 때문이라고 한다.
+      성악 전공인 아버지, 피아노 연주와 재즈를 하시는 어머니 사이에서 자라
+      자연스럽게 음악을 접하며 가수의 꿈을 키우게 되었다고 한다. 어릴 때는 SF,
+      판타지를 좋아해 소설가가 되고 싶었던 적도 있다고 한다. 본인의 말에 의하면,
+      어릴 적 사소한 장난에도 잘 웃고 잘 울던 아이였다고 한다. 자신의 생일에
+      부모님과 형이 “오늘 생일이었어?”라며 몰랐던 척 장난을 치면 속상해서 울기도
+      했다고 한다. 마음이 여려서 가지고 놀던 인형을 떨어뜨리거나 치게 되면
+      속상하고 미안했다고 한다. NCT 매니저인 강병준 팀장은 “마크는 밝고 긍정적인
+      에너지가 넘치는 바른 아이, 부모님께 사랑 듬뿍 받고 자란 티가 난다"라고
+      말한 적도 있다. 캐나다에서는 좋은 대학교에 가겠다는 목표를 가지고 공부를
+      열심히 했다고 한다. 하지만 한국에 오니 자신보다 열심히 공부하는 한국
+      학생들이 훨씬 많다고 느꼈다고. 초등학생 때 학부모를 대상으로 학교 투어
+      가이드를 한 적이 있고 중학교 2학년 때는 캐나다에서 유학 중인 한국인
+      초등학생에게 기초적인 생활영어와 필수적인 단어들을 위주로 영어 과외를 한
+      적도 있다고 한다.
+    </div>
+
+    <script>
+      $(".mark").on("scroll", function () {
+        var nowscroll = document.querySelector(".mark").scrollTop;
+        var divh = document.querySelector(".mark").clientHeight;
+        var scrollh = document.querySelector(".mark").scrollHeight;
+
+        if (nowscroll + divh > scrollh) {
+          alert("약관을 확인하셨습니다.");
+        }
+      });
+      // div 실제 높이는 셀렉터.scrollHeight
+    </script>
+
+    <!-- 스크롤이벤트 확인을 위해 임의로 추가 -->
+    <div style="height: 1000px"></div>
     <div class="alert alert-danger">
       <span class="number">5</span>초 이내 구매시 사은품 증정!
     </div>
