@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      console.log(time(1, 30));
+      console.log("가격 : " + discount(10, true));
+
+      var num;
+      function time(a, b) {
+        num = a * 60000 + b * 1000;
+        return num;
+      }
+      var price;
+      function discount(a, b) {
+        if (b === true) {
+          price = (a * 0.9 - 1.5).toFixed(1);
+        } else {
+          price = (a * 0.9).toFixed(1);
+        }
+        return parseFloat(price);
+      }
+    </script>
+  </body>
+</html>
