@@ -37,7 +37,7 @@
   height: 100%;
   position: fixed;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 5;
+  z-index: 6;
   padding: 30px;
   /* 애니메이션 줄 때 display: none; 의 대용 */
   visibility: hidden;

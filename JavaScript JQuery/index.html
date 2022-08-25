@@ -92,6 +92,15 @@
           alert("패스워드에 영어대문자를 넣어서 생성해주세요");
         }
       });
+
+      // 검은 배경 누르면 모달창 닫히는 코드
+      document
+        .querySelector(".black-bg")
+        .addEventListener("click", function (e) {
+          if (e.target == document.querySelector(".black-bg")) {
+            document.querySelector(".black-bg").classList.remove("show-modal");
+          }
+        });
     </script>
 
     <nav class="navbar navbar-light bg-light">
