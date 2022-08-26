@@ -16,12 +16,12 @@ MongoClient.connect(
     if (에러) return console.log(에러);
     // todoapp 이라는 database에 연결 좀 해주세요
     db = client.db("todoapp");
-    db.collection("post").insertOne(
-      { 이름: "chaewon", 나이: 20 },
-      function (에러, 결과) {
-        console.log("저장 완료!");
-      }
-    );
+    // db.collection("post").insertOne(
+    //   { 이름: "chaewon", 나이: 20 },
+    //   function (에러, 결과) {
+    //     console.log("저장 완료!");
+    //   }
+    // );
 
     app.listen(8080, function () {
       console.log("listening on 8080");
