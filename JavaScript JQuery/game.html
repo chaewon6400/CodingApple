@@ -7,21 +7,32 @@
     <title>Document</title>
   </head>
   <body>
-    <h4>누구를 제일 사랑하시나요! 💘</h4>
-    <button>마크</button>
-    <button>런쥔</button>
-    <button>제노</button>
-
+    <div id="quiz">
+      <h4>누구를 제일 사랑하시나요! 💘</h4>
+      <button>마크</button>
+      <button>런쥔</button>
+      <button>제노</button>
+      <br />
+      <h3 id="result"></h3>
+    </div>
     <script>
-      let a = 2 + 2;
-      switch (a) {
-        case 3:
-          alert("a는 3이네요");
-          break;
-        case 4:
-          alert("a는 4네요");
-          break;
-      }
+      document.querySelector("#quiz").addEventListener("click", function (e) {
+        var lover = e.target.innerHTML;
+        switch (lover) {
+          case "마크":
+            document.querySelector("#result").innerHTML =
+              "마크를 제일 사랑하시네요 🐯";
+            break;
+          case "런쥔":
+            document.querySelector("#result").innerHTML =
+              "런쥔이를 제일 사랑하시네요 🦊";
+            break;
+          case "제노":
+            document.querySelector("#result").innerHTML =
+              "제노를 제일 사랑하시네요 🐶";
+            break;
+        }
+      });
     </script>
   </body>
 </html>
