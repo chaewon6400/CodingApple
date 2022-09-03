@@ -21,12 +21,16 @@
   </head>
   <body>
     <div class="container mt-3">
-      <div class="card p-3">상품명 / 가격</div>
+      <div class="card p-3">
+        <span class="car-title">상품명</span>
+        <span class="car-price">가격</span>
+      </div>
     </div>
 
     <script>
-      var car = ["sonata", 50000, "red"];
-      console.log(car[2]);
+      var car2 = { name: "소나타", price: [50000, 3000, 4000] };
+      document.querySelector(".car-title").innerHTML = car2.name;
+      document.querySelector(".car-price").innerHTML = car2.price[0];
     </script>
 
     <div class="container mt-5">
